@@ -1,0 +1,1 @@
+console.log('API URL = http://asasd.com/asdfgfghfghfgh?api_key=' + API_KEY);
