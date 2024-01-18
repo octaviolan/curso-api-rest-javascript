@@ -71,7 +71,9 @@ function categoriesPage() {
 
   const [ , categoryData] = location.hash.split('='); 
   const [categoryId, categotyName] = categoryData.split('-');
-  headerCategoryTitle.innerHTML = categotyName;
+  //headerCategoryTitle.innerHTML = categotyName; // vulnerable to xss
+  // recommended
+  headerCategoryTitle.textContent = categotyName;
 
   console.log(categoryId);
   getMoviesByCategory(categoryId);
