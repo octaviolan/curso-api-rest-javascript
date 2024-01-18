@@ -129,6 +129,14 @@ async function getMoviesBySearch(query) {
   
 }
 
+async function getTrendingMovies() {
+  const response = await fetch('https://api.themoviedb.org/3/trending/movie/day?api_key=' + API_KEY);
+  const data = await response.json();
+  const movies = data.results;
+
+  createMovies(movies, genericSection)
+ 
+}
 
 
 
